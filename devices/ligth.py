@@ -7,6 +7,8 @@ class Ligth(AbstractDevice):
 
     def __init__(self):
         self.machine = Machine(model=self, states=Ligth.states, initial='off')
+        self.machine.add_transition(trigger='turnOn', source='off', dest='on')
+        self.machine.add_transition(trigger='turnOff', source='on', dest='off')
     
     def current_status(self):
         pass

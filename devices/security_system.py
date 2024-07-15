@@ -6,6 +6,9 @@ class SecuritySystem(AbstractDevice):
 
     def __init__(self):
         self.machine = Machine(model=self, states=SecuritySystem.states, initial='unarmed')
+        self.machine.add_transition(trigger='armed_without_people_at_home', source='unarmed', dest='armed_without_people_at_home')
+        self.machine.add_transition(trigger='armed_with_people_at_home', source='unarmed',  dest='armed_with_people_at_home')
+        self.machine.add_transition(trigger='unarmed', source=['armed_without_people_at_home', 'armed_with_people_at_home'], dest='unarmed')
     
     def current_status(self):
         pass
