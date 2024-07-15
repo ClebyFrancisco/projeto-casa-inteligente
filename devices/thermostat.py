@@ -13,6 +13,9 @@ class Thermostat(AbstractDevice):
 
         
     def current_status(self):
-        pass
+        return self.state
 
+
+a = Thermostat()
+print(a.current_status)
 

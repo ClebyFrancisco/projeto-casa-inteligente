@@ -11,4 +11,4 @@ class SecuritySystem(AbstractDevice):
         self.machine.add_transition(trigger='unarmed', source=['armed_without_people_at_home', 'armed_with_people_at_home'], dest='unarmed')
     
     def current_status(self):
-        pass
+        return self.state

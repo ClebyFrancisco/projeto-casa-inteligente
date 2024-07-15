@@ -11,4 +11,4 @@ class Ligth(AbstractDevice):
         self.machine.add_transition(trigger='turnOff', source='on', dest='off')
     
     def current_status(self):
-        pass
+        return self.state

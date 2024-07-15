@@ -5,3 +5,9 @@ class SmartHome:
             SmartHome.__instance = super().__new__(cls)
         return SmartHome.__instance
     
+    def __init__(self):
+        self.devices = []
+
+    def add_device(self, device):
+        self.devices.append(device)
+    
