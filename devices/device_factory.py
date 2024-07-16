@@ -1,17 +1,17 @@
-from ligth import Ligth
-from thermostat import Thermostat
-from security_system import SecuritySystem
+from .light import Light
+from .thermostat import Thermostat
+from .security_system import SecuritySystem
 
 class DeviceFactory:
     @staticmethod
     def create_device(type):
         type = type.lower()
 
-        if type == 'ligth':
-            return Ligth()
+        if type == 'light':
+            return Light()
         elif type == 'thermostat':
             return Thermostat()
-        elif type == 'security system':
+        elif type == 'security_system':
             return SecuritySystem()
         else:
             raise ValueError("unknown device type")
