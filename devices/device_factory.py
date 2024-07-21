@@ -14,4 +14,4 @@ class DeviceFactory:
         elif type == 'security_system':
             return SecuritySystem()
         else:
-            raise ValueError("unknown device type")
+            raise ValueError("unknown device type \n")

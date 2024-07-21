@@ -15,8 +15,3 @@ class Light(AbstractDevice):
     def current_status(self):
         return self.state
     
-    def turn_on(self):
-        self.turn_on()
-
-    def turn_off(self):
-        self.turn_off()

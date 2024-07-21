@@ -13,12 +13,3 @@ class SecuritySystem(AbstractDevice):
     
     def current_status(self):
         return self.state
-    
-    def arm_with_people(self):
-        self.armed_with_people_at_home()
-
-    def arm(self):
-        self.armed_without_people_at_home()
-
-    def disarm(self):
-        self.unarmed()

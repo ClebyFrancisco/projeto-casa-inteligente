@@ -15,19 +15,3 @@ class Thermostat(AbstractDevice):
         
     def current_status(self):
         return self.state
-
-    def warm(self):
-        self.warm()
-
-    def coolDown(self):
-        self.coolDown()
-
-    def turn_off(self):
-        self.turn_off()
-
-
-if __name__ == "__main__":
-    thermostat = Thermostat()
-    print(thermostat.current_status())  # Deveria retornar 'off'
-    thermostat.warm()
-    print(thermostat.current_status()) 
